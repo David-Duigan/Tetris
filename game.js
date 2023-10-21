@@ -344,19 +344,32 @@ class Game {
 
             
         } else if (this.informationMenu) {
-            fillTextHelper("Right Player Keys", "green", "30px Arial", "left", 400, 100)
-            fillTextHelper("Rotate:  Up Arrow", "white", "25px Arial", "left", 430, 145)
-            fillTextHelper("Move Right:  Right Arrow", "white", "25px Arial", "left", 430, 180)
-            fillTextHelper("Move Left:  Left Arrow", "white", "25px Arial", "left", 430, 215)
-            fillTextHelper("Move Down:  Down Arrow", "white", "25px Arial", "left", 430, 250)
-            fillTextHelper("Jump Down:  Right Control", "white", "25px Arial", "left", 430, 285)
+            fillTextHelper("Multiplayer Mode", "white", "50px Arial", "left", 170, 80)
 
-            fillTextHelper("Left Player Keys", "red", "30px Arial", "left", 900, 100)
-            fillTextHelper("Rotate:  W", "white", "25px Arial", "left", 930, 145)
-            fillTextHelper("Move Right:  D", "white", "25px Arial", "left", 930, 180)
-            fillTextHelper("Move Left:  A", "white", "25px Arial", "left", 930, 215)
-            fillTextHelper("Move Down:  S", "white", "25px Arial", "left", 930, 250)
-            fillTextHelper("Jump Down:  Space", "white", "25px Arial", "left", 930, 285)
+            fillTextHelper("Right Player Keys", "green", "30px Arial", "left", 50, 100 + 50)
+            fillTextHelper("Rotate:  Up Arrow", "white", "25px Arial", "left", 80, 145 + 50)
+            fillTextHelper("Move Right:  Right Arrow", "white", "25px Arial", "left", 80, 180 + 50)
+            fillTextHelper("Move Left:  Left Arrow", "white", "25px Arial", "left", 80, 215 + 50)
+            fillTextHelper("Move Down:  Down Arrow", "white", "25px Arial", "left", 80, 250 + 50)
+            fillTextHelper("Jump Down:  Enter", "white", "25px Arial", "left", 80, 285 + 50)
+
+            fillTextHelper("Left Player Keys", "red", "30px Arial", "left", 450, 100 + 50)
+            fillTextHelper("Rotate:  W", "white", "25px Arial", "left", 480, 145 + 50)
+            fillTextHelper("Move Right:  D", "white", "25px Arial", "left", 480, 180 + 50)
+            fillTextHelper("Move Left:  A", "white", "25px Arial", "left", 480, 215 + 50)
+            fillTextHelper("Move Down:  S", "white", "25px Arial", "left", 480, 250 + 50)
+            fillTextHelper("Jump Down:  Space", "white", "25px Arial", "left", 480, 285 + 50)
+
+            fillTextHelper("Singleplayer Mode", "white", "50px Arial", "left", 900, 80)
+
+            fillTextHelper("Player Keys", "green", "30px Arial", "left", 950, 100 + 50)
+            fillTextHelper("Rotate:  Up Arrow", "white", "25px Arial", "left", 980, 145 + 50)
+            fillTextHelper("Move Right:  Right Arrow", "white", "25px Arial", "left", 980, 180 + 50)
+            fillTextHelper("Move Left:  Left Arrow", "white", "25px Arial", "left", 980, 215 + 50)
+            fillTextHelper("Move Down:  Down Arrow", "white", "25px Arial", "left", 980, 250 + 50)
+            fillTextHelper("Jump Down:  Enter", "white", "25px Arial", "left", 980, 285 + 50)
+
+            fillTextHelper("Created by: David Duigan", "white", "20px Arial", "left", 10, this.height - 20)
 
             this.informationExitButton.draw(this.ctx);
             if (this.informationButton.checkMouseCollision() && this.mouse.clicked){
@@ -371,6 +384,7 @@ class Game {
             this.singlePlayerButton.draw(this.ctx);
             this.multiPlayerButton.draw(this.ctx);
             this.informationButton.draw(this.ctx);
+            fillTextHelper("Created by: David Duigan", "white", "20px Arial", "left", 10, this.height - 20)
 
             if (this.singlePlayerButton.checkMouseCollision() && this.mouse.clicked){
                 this.clickAudio.play();
@@ -410,6 +424,7 @@ class Game {
                     this.levelScreen = false;
                 }
             })
+            fillTextHelper("Created by: David Duigan", "white", "20px Arial", "left", 10, this.height - 20)
         }
     }
 }
